@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+:root {
+    --main-color-b: #080f0f;
+    --main-color-v: #490062;
+    --main-color-v2: #300040;
+    --main-color-c: #CCCCCC;
+    --main-color-r: #FF0099;
+    --main-color-g: #3A3A3A;
+
+  }
+
+/* body { background: #000000} */
+
+body,
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    scroll-snap-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* ####################################### */
+/* ############### Navigation ############ */
+/* ####################################### */
+
+.navigation{
+    width: 100%;
+    height: 60px;
+    /* border-bottom: 1px solid #000; */
+    display: flex;
+    justify-content: space-evenly;
+    -webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.2);
+    background: white;
+    font-family: 'Oswald', sans-serif;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+
+#logo{
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#logo img{
+    width: 150px;
+}
+
+.menu{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.social-media{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.8rem;
+}
+
+.menu a,
+.social-media a{
+    color: var(--main-color-v);
+}
+.menu a:hover,
+.social-media a:hover{
+    color: var(--main-color-r);
+    text-decoration: underline;
+}
+
+.menu-burger{
+    display: none;
+}
+
+/* ####################################### */
+/* ###############HOME  PAGE ############ */
+/* ###################################### */
+
+.banner{
+    width: 100%;
+    height: calc( 100vh - 60px );
+    background: url("..//img/chambre1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.banner-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #F6F6F6;
+    background: rgba(0, 0, 0, 0.4);
+}
+.banner-card h1{
+    font-size: 3.25rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+.banner-card span{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.btn-info{
+    padding: 15px 40px;
+    background: var(--main-color-r);
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.btn-info:hover{
+    background: var(--main-color-v);
+}
+
+.about{
+    width: 100%;
+    height: calc( 100vh - 60px );
+    
+}
+
+.about-up{
+    width: 100%;
+    height: 50vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #cccccc60;
+    justify-content: center;
+}
+
+.about-up h1{
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    line-height: 50px;
+}
+.about-up p{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-down{
+    width: 100%;
+    height: calc( 50vh - 60px );
+    background: url("../img/chambre2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.img-filtre{
+    width: 100%;
+    height: 100%;
+    background: #00000060;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F6F6F6;
+    font-size: 2.1rem;
+}
+
+.img-filtre h2{
+    text-align: center;
+}
+
+
+/* ####################################### */
+/* ################# FOOTER ############## */
+/* ####################################### */
+.footer{
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.text-card{
+    width: 350px;
+    height: 200px;
+    /* border: 1px solid; */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.text-card span{
+    color: var(--main-color-r);
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.logo-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    padding: 40px;
+    background: #490062;
+    color: white;
+    text-align: center;
+}
+
+#admin{
+ color: white;
+}
+#admin:hover{
+ color: black;
+}
+
+
+/* ####################################### */
+/* ############### RESPONSIVE ############ */
+/* ####################################### */
+
+@media screen and (max-width: 900px)   
+{
+    .menu,
+    .social-media{
+        display: none;
+        background: #fff;
+    }
+
+    .menu{
+        width: 100%;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        transform: translateY(-40vh);
+        transition: transform 0.5s;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .menu.active{
+        visibility: visible;
+        opacity: 1;
+        top: 60px;
+        transform: translateY(0);
+        z-index: -50;
+    }
+
+    .navigation{
+        z-index: 100;
+    }
+
+
+    .menu-burger{
+        display: block;
+        position: absolute;
+        right: 50px;
+        top: 15px;
+        font-size: 1.8rem;
+    }
+    .menu-burger a{
+        color: var(--main-color-v);
+    }
+    .menu-burger a:hover{
+        color: var(--main-color-r);
+    }
+
+    .menu-close{
+        display: none;
+    }
+
+/* ####################################### */
+/* ######## HOME-PAGE RESPONSIVE ######### */
+/* ####################################### */
+.about-up p{
+    width: 90%
+}
+.about-up h1{
+    text-align: center;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+    .navigation{
+        justify-content: start;
+    }
+}
+
+@media screen and (max-width: 780px) {
+   
+    .menu-burger{
+        right: 25px;
+    }
+
+}

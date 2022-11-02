@@ -1,7 +1,68 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
-<h1>test</h1>
+    <section class="banner">
+        <div class="banner-card">
+            <span>
+            <i class="uil uil-star"></i>
+            <i class="uil uil-star"></i>
+            <i class="uil uil-star"></i>
+            </span>
+            <h1>L’hôtel du Nord</h1>
+            <a class="btn-info" href="#about">À PROPOS</a>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about-up">
+            <h1>Bienvenue dans notre hôtel et centres de villégiature</h1>
+
+            <p> L'hôtel du Nord a mis en place une charte
+                qualité dans un souci constant d'améliorer ses
+                services où la satisfaction du client est au coeur
+                de notre démarche.</p>
+                <a class="btn-info" href="#about">Lire plus</a>
+        </div>
+        <div class="about-down">
+        <div class="img-filtre">
+        
+            <h2>Réservez des chambres d'hôtel et une salle de conference .</h2>
+        </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="text-card logo-card">
+            <img width="150" src="{{ asset('assets/img/logo.png') }}" alt="">
+        </div>
+        <div class="text-card">
+            <h2>Hotel du nord :</h2>
+            <p>Un établissement 3 étoiles et un hôtel-restaurant qui vient d'être entièrement
+            rénové. Les salles pour les séminaires bénéficie de la technologie dernier cri et permettent un
+            environnement serein.</p>
+            <a id="admin" href="">espace admin</a>
+        </div>
+        <div class="text-card">
+        <h3>Contact :</h3>
+        <h3>
+        <span><i class="uil uil-map-marker"></i></span>
+        Lorem ipsum dolor sit amet.
+        </h3>
+        <h3>
+        <span>
+        <i class="uil uil-phone"></i>
+        </span>
+        +(33) 3 90 90 90 
+        </h3>
+        <h3>
+        <span><i class="uil uil-envelope-edit"></i></span>
+        contact@hotel-nord.com
+        </h3>
+        </div>
+    </section>
+    <footer>
+    
+        <P>COPYRIGHT</P>
+    </footer>
+   
 {% endblock %}
